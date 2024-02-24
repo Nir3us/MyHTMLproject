@@ -1,0 +1,255 @@
+
+body {
+    margin: 0 !important;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.navigation{ 
+    margin-left: 3%;
+    margin-right: 3%;
+	padding: 10px 0;
+	text-align: center;
+    align-items: center;
+    color: #132519;
+    
+}
+
+
+.sticky{
+    position: fixed;
+    background-color: #93be89;
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: ease-in;
+    transition-duration: 0.6s;
+}
+
+.navigation > ol{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 15px;
+	height: 35px;
+	line-height: 200%;
+	display: inline-block;
+}
+
+.navigation > ol a{
+    color: #132519;
+	text-decoration: none;
+	display: block;
+}
+
+.navigation > ol > li{
+	float: left;
+	width: 150px;
+	height: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navigation > ol > li:hover
+{
+	background-color: #93be89;
+}
+
+.navigation > ol > li:hover > a{
+	color: #132519;
+}
+
+.navigation > ol > li > ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 40px;
+	display: none;
+}
+
+.navigation > ol > li:hover > ul{
+	display: block;
+}
+
+.navigation > ol > li > ul > li{
+	background-color:#93be89;
+	position: relative;
+	z-index: 100;
+	border-top: 1px dashed #5D8C55;
+}
+
+.navigation > ol > li > ul > li:hover{
+	background-color: #5D8C55;
+}
+
+.navigation > ol > li > ul > li:hover > a{
+	color: #132519;
+}
+
+.active{
+    color: #5D8C55;
+    background-color: #355935;
+}
+
+.navigationMedium {
+    margin-left: 3%;
+    margin-right: 3%;
+	padding: 10px 0;
+	text-align: center;
+    align-items: center;
+    color: #132519;
+    display: none;
+}
+
+.navigationMedium > ol{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-size: 16px;
+	height: 25px;
+	line-height: 200%;
+	display: inline-block;
+}
+
+.navigationMedium > ol a{
+    color: #132519;
+	text-decoration: none;
+	display: block;
+}
+
+.navigationMedium > ol > li{
+	float: left;
+	width: 100px;
+	height: 30px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.navigationMedium > ol > li:hover
+{
+	background-color: #93be89;
+}
+
+.navigationMedium > ol > li:hover > a{
+	color: #132519;
+}
+
+footer {
+    text-align: center;
+    font-size: smaller;
+    background-color: #132519;
+    color: aliceblue;
+    
+    padding: 10px;
+    height: 100px;
+}
+
+.tabWydatki {
+    border: 1px groove #132519;
+    text-align: center;
+    align-self: center;
+    
+}
+.nieparzysty {
+    border: 1px groove #132519;
+    background-color: rgb(210, 212, 57);
+}
+.parzysty {
+    border: 1px groove #132519;
+    background-color: rgb(155, 137, 255);
+}
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+    z-index: 199;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: #132519;
+    margin: 6px 0;
+    transition: 0.4s;
+    display: none;
+}
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2 {
+    opacity: 0;
+}
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+.mobile-menu li {
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width:616px) {
+    .navigation{
+        display: none;
+    }
+    #hamburger-icon {
+        display: block;
+        position: fixed;
+        top: 0px;
+        left: 20px;
+        z-index: 199;
+    }
+    #hamburger-icon > ul {
+        background-color: #93be89;
+        color: #132519;
+        z-index: 198;
+        width: 616px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 18px;
+        
+    }
+    #hamburger-icon > ul > li > a {
+        text-decoration: none;
+        color: #132519;
+    }
+    #hamburger-icon > ul :hover {
+        background-color: #355935;
+        color: #132519;
+    }
+    #hamburger-icon div {
+        display: block;
+    }
+}
+@media only screen and (min-width:617px) and (max-width:1380px) {
+    .navigation{
+        display: none;
+    }
+    .navigationMedium{
+        display: block;
+    }
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>O Autorach!</title>
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+        <meta name="keywords" content="Travel"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="author" content="Norbert Białek"/>
+        <meta name="description" content="Blog podróżniczy">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="minimum-scale=1, maximum-scale=9">
+        <meta name="viewport" content="user-scalable=yes">
+
+    
+        <link rel="stylesheet" href="styles/style.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/text.css" type="text/css"/>
+        <link rel="stylesheet" href="styles/header.css" type="text/css"/>
+        <link rel="stylesheet" href="container.css" type="text/css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,100;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <script src="jquery.js"></script>
+        <script src="skryptcss.js"></script>
+        <script type="text/javascript">
+            var numer_zdjecia = Math.floor(Math.random()*5)+1;
+
+            function schowaj(){
+                $("slider").fadeOut(500);
+            }
+
+            function zmienslajd() {
+                numer_zdjecia++;
+                if (numer_zdjecia > 5) numer_zdjecia = 1;
+    
+                var imageUrl = 'url(\'img/header' + numer_zdjecia + '.jpg\')';
+                document.getElementById("slider").style.backgroundImage = imageUrl;
+                $("#slider").fadeIn(500);
+    
+                setTimeout("zmienslajd()", 5000);
+                setTimeout("schowaj()", 4500)
+            }
+        </script>
+        
+    
+    </head>
+    <body onload="zmienslajd()">
+        
+        <div class="header">
+            <div id="slider" class="background-image" style="background-image: url('img/header1.jpg');">
+                <div class="centered-content">
+                    <h1>Tropiciele endemicznych kotków</h1>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="navigation">
+			<ol>
+				<li class="active"><a href="index.html">Strona główna</a></li>
+				<li><a href="euro_main.html">Europa</a>
+					<ul>
+						<li><a href="polska_main.html">Polska</a></li>
+						<li><a href="chorwacja_main.html">Chorwacja</a></li>
+						<li><a href="portugalia_main.html">Portugalia</a></li>
+						<li><a href="francja_main.html">Francja</a></li>
+					</ul>
+				</li>
+				<li><a href="azja_main.html">Azja</a>
+					<ul>
+						<li><a href="trucja_main.html">Turcja</a></li>
+						<li><a href="oman_main.html">Oman</a></li>
+						<li><a href="uae_main.html">Zjednoczone Emiraty Arabskie</a></li>
+						<li><a href="gruzja_main.html">Gruzja</a></li>
+					</ul>
+				</li>
+				<li><a href="afryka_main.html">Afryka</a>
+					<ul>
+						<li><a href="maroko_main.html">Maroko</a></li>
+						<li><a href="egipt_main.html">Egipt</a></li>
+						<li><a href="mali_main.html">Mali</a></li>
+						<li><a href="mauretania_main.html">Mauretania</a></li>
+					</ul>
+				</li>
+				<li><a href="ameryka_polnocna_main.html">Ameryka Północna</a>
+					<ul>
+						<li><a href="usa_main.html">Stany Zjednoczone</a></li>
+						<li><a href="meksyk_main.html">Meksyk</a></li>
+						<li><a href="kanada_main.html">Kanada</a></li>
+						<li><a href="grenlandia_main.html">Grenlandia</a></li>
+					</ul>
+				</li>
+                <li><a href="ameryka_poludniowa_main.html">Ameryka Południowa</a>
+					<ul>
+						<li><a href="brazylia_main.html">Brazylia</a></li>
+						<li><a href="argentyna_main.html">Argentyna</a></li>
+						<li><a href="chile_main.html">Chile</a></li>
+						<li><a href="boliwia_main.html">Boliwia</a></li>
+					</ul>
+				</li>
+                <li><a href="australia_oceania_main.html">Australia i Oceania</a>
+					<ul>
+						<li><a href="australia_main.html">Australia</a></li>
+						<li><a href="nowa_zelandia_main.html">Nowa Zelandia</a></li>
+						<li><a href="indonezja_main.html">Indonezja</a></li>
+						<li><a href="papua_main.html">Papua</a></li>
+					</ul>
+				</li>
+				<li><a href="o_autorach.html">O autorach</a></li>
+			</ol>
+        </div>
+
+        <div class="navigationMedium">
+			<ol>
+				<li class="active"><a href="index.html">S G</a></li>
+				<li><a href="euro_main.html">Euro</a>
+				</li>
+				<li><a href="#">Azja</a>
+				</li>
+				<li><a href="afryka_main.html">Afryka</a>
+				</li>
+				<li><a href="o_autorach.html">O autorach</a></li>
+			</ol>
+        </div>
+
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li class="active"><a href="index.html">Strona główna</a></li>
+                <li><a href="euro_main.html">Europa</a></li>
+                <li><a href="azja_main.html">Azja</a></li>
+                <li><a href="afryka_main.html">Afryka</a></li>
+                <li><a href="ameryka_polnocna_main.html">Ameryka Północna</a></li>
+                <li><a href="ameryka_poludniowa_main.html">Ameryka Południowa</a></li>
+                <li><a href="australia_oceania_main.html">Australia i Oceania</a></li>
+                <li><a href="o_autorach.html">O autorach</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="article">
+                <div class="title">
+                    <h1>Witaj na naszym blogu!</h1>
+                </div>
+                
+                    <div class="text_daddy">
+                        <div class="solo_text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend, elit id ullamcorper ullamcorper, risus lorem posuere sem, at tincidunt ipsum metus a nisi. Suspendisse laoreet venenatis quam, eget rutrum erat iaculis in. Maecenas nulla ipsum, lobortis in interdum id, pharetra nec quam. Duis iaculis ligula id velit commodo pulvinar vitae at enim. Mauris egestas nisl in suscipit interdum. Etiam ac tempus nibh, vitae suscipit risus. Etiam at dignissim arcu. Nulla id lectus commodo, luctus ipsum vitae, auctor est. Vivamus nibh turpis, bibendum sit amet tempor a, imperdiet eget ante. Nullam velit nisi, ullamcorper sed neque eu, porttitor aliquam dolor.</p>
+                        </div>
+
+                        <div class="breaker_of_styles"></div>
+                        <div class="odnosnik_do_artykulu">
+                            <a href="#"><h3 class="text_to_look_good">Marokańska aglomeracja i dzikie kotki!</h3>
+                            <div class="row_to_look_good">
+                                <div class="img_next_to_text">
+                                    <img  class="aparat" src="img/maroko/maroko_first_sight.JPG">
+                                </div>
+                                <div class="wejsciówka_artykul">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend, elit id ullamcorper ullamcorper, risus lorem posuere sem, at tincidunt ipsum metus a nisi. Suspendisse laoreet venenatis quam, eget rutrum erat iaculis in. Maecenas nulla ipsum, lobortis in interdum id, pharetra nec quam. Duis iaculis ligula id velit commodo pulvinar vitae at enim. Mauris egestas nisl in suscipit interdum. Etiam ac tempus nibh, vitae suscipit risus. Etiam at dignissim arcu. Nulla id lectus commodo, luctus ipsum vitae, auctor est. Vivamus nibh turpis, bibendum sit amet tempor a, imperdiet eget ante. Nullam velit nisi, ullamcorper sed neque eu, porttitor aliquam dolor....</p>
+                                </div>
+                            </div></a>
+                        </div>
+                        <div class="breaker_of_styles"></div>
+                        <div class="odnosnik_do_artykulu">
+                            <a href="#"><h3 class="text_to_look_good">Oman jest pełen kotków!</h3>
+                            <div class="row_to_look_good">
+                                <div class="img_next_to_text">
+                                    <img  class="aparat" src="img/maroko/maroko_first_sight.JPG">
+                                </div>
+                                <div class="wejsciówka_artykul">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eleifend, elit id ullamcorper ullamcorper, risus lorem posuere sem, at tincidunt ipsum metus a nisi. Suspendisse laoreet venenatis quam, eget rutrum erat iaculis in. Maecenas nulla ipsum, lobortis in interdum id, pharetra nec quam. Duis iaculis ligula id velit commodo pulvinar vitae at enim. Mauris egestas nisl in suscipit interdum. Etiam ac tempus nibh, vitae suscipit risus. Etiam at dignissim arcu. Nulla id lectus commodo, luctus ipsum vitae, auctor est. Vivamus nibh turpis, bibendum sit amet tempor a, imperdiet eget ante. Nullam velit nisi, ullamcorper sed neque eu, porttitor aliquam dolor.....</p>
+                                </div>
+                            </div></a>
+                        </div>
+                        
+            </div>
+            <div class="row_of_imgs">
+                <div class="each_img_in_row">
+                    <img class="aparat" src="img/maroko/DSC_2341.JPG" alt="zdj maroka"></div>
+                <div class="each_img_in_row">
+                    <img class="aparat" src="img/maroko/DSC_2353.JPG" alt="zdj maroka">
+                </div>
+                <div class="each_img_in_row">
+                    <img class="aparat" src="img/maroko/DSC_2360.JPG" alt="zdj maroka">
+                </div>
+            </div>
+            
+        </div>
+        <footer>
+            <p>Informacje kontaktowe: 
+                <br />mlodszy.bialek@gmail.com
+                <br />+48 791 598 492
+            </p>
+            <p>Strona jest własnością Norberta Białka.&#169</p>
+        </footer>
+        
+
+        <script src="jquery.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                var NavY = $('.navigation').offset().top;
+
+                var stickyNav = function(){
+                    var Scrolly = $(window).scrollTop();
+
+                    if (Scrolly > NavY + 100) {
+                        $('.navigation').addClass('sticky');
+                    } else {
+                        $('.navigation').removeClass('sticky');
+                    }
+                    };
+
+                    stickyNav();
+
+                    $(window).scroll(function() {
+                        stickyNav();
+                    });
+                });
+
+        </script>
+        <script>
+            $(document).ready(function() {
+                var NavY = $('.navigationMedium').offset().top;
+
+                var stickyNav = function(){
+                    var Scrolly = $(window).scrollTop();
+
+                    if (Scrolly > NavY + 100) {
+                        $('.navigationMedium').addClass('sticky');
+                    } else {
+                        $('.navigationMedium').removeClass('sticky');
+                    }
+                    };
+
+                    stickyNav();
+
+                    $(window).scroll(function() {
+                        stickyNav();
+                    });
+                });
+
+        </script>
+        
+        <script>
+            function toggleMobileMenu(menu) {
+                menu.classList.toggle('open');
+            }
+        </script>
+
+    </body>
+</html>

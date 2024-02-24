@@ -1,0 +1,32 @@
+.background-image {
+    background-size: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    position: relative;
+}
+
+.centered-content {
+    text-align: left;
+    position: absolute;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 95%;
+    padding-left: 3%;
+    font-size: xx-large;
+    color: #fff;
+}
+
+
+header{
+    height: 600px;
+    overflow: hidden;
+    /*4:12:00 https://www.youtube.com/watch?v=G3e-cpL7ofc*/
+}
+@media only screen and (max-width:1616px) {
+    .centered-content{
+        top: 30%;
+        font-size: larger;
+    }
+}
